@@ -16,7 +16,6 @@ function App() {
         <Switch>
           <Redirect exact from="/" to="/liste" />
           <Route exact path="/liste" component={List} />
-
           <Route exact path="/item/:id" component={Post} />
           <Route exact path="**">
             <Redirect to="/liste" />
