@@ -1,0 +1,20 @@
+.btn {
+  background-color: pink;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: lightpink;
+}
+
+h1 {
+  font-weight: 600;
+  color: white;
+  background-color: palevioletred;
+}
+
+h4 {
+  text-transform: uppercase;
+}

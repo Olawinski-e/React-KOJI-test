@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import "./postList.css";
 
 class PostList extends Component {
   constructor(props) {
@@ -28,8 +29,10 @@ class PostList extends Component {
         <h2>List of posts</h2>
         {list.length
           ? list.map((item) => (
-              <div key={item.id}>
-                <Link to={() => `/item/${item.id}`}>{item.title}</Link>
+              <div key={item.id} className="link-div">
+                <Link className="link" to={() => `/item/${item.id}`}>
+                  {item.title}
+                </Link>
               </div>
             ))
           : null}

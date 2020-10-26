@@ -1,0 +1,16 @@
+.link-div {
+  padding: 8px;
+}
+
+.link {
+  color: palevioletred;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 4px;
+}
+
+.link:hover {
+  font-weight: 600;
+  color: white;
+  background-color: palevioletred;
+}

@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "./post.css";
+import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 class Post extends Component {
   constructor(props) {
@@ -15,7 +18,6 @@ class Post extends Component {
     axios
       .get("https://jsonplaceholder.typicode.com/posts/" + this.state.id)
       .then((res) => {
-        console.log(res.data);
         this.setState({ title: res.data.title });
         this.setState({ body: res.data.body });
       })
@@ -32,6 +34,9 @@ class Post extends Component {
         <h1>Post n° {id}</h1>
         <h4>{title}</h4>
         <p>{body}</p>
+        <Link to="/">
+          <Button variant="primary">Back</Button>
+        </Link>
       </div>
     );
   }
