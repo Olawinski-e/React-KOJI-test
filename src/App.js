@@ -15,10 +15,10 @@ function App() {
       <div className="App">
         <Switch>
           <Redirect exact from="/" to="/liste" />
-          <Route path="/liste" component={List} />
+          <Route exact path="/liste" component={List} />
 
-          <Route path="/liste/:id">{Post}</Route>
-          <Route path="**" exact>
+          <Route exact path="/item/:id" component={Post} />
+          <Route exact path="**">
             <Redirect to="/liste" />
           </Route>
         </Switch>

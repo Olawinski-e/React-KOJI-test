@@ -6,7 +6,11 @@ class Post extends Component {
     this.state = {};
   }
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <h1>hello</h1>
+      </div>
+    );
   }
 }
 

@@ -8,7 +8,6 @@ class PostList extends Component {
     this.state = {
       list: [],
       errMsg: "",
-      id: this.props.location.search,
     };
   }
 
@@ -30,7 +29,7 @@ class PostList extends Component {
         {list.length
           ? list.map((item) => (
               <div key={item.id}>
-                <Link to={(item) => `/liste/${item.id}`}>{item.title}</Link>
+                <Link to={() => `/item/${item.id}`}>{item.title}</Link>
               </div>
             ))
           : null}
